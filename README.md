@@ -125,8 +125,7 @@ TestBaseModel class:
 No known bugs at this time. 
 
 ## Authors
-Waython Yesse - [Github](https://github.com/YesseJr) / [Email](waythonny@yahoo.com)  
-Keabetswe MONTSHO -
+ * Waython Yesse - [Github](https://github.com/YesseJr) || [Email](waythonny@yahoo.com)  
 
 
 ## License
