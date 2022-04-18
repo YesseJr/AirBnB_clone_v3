@@ -1,23 +1,33 @@
 #!/usr/bin/python3
-"""
-Idex view for the API
-"""
+"""index.py to connect to API"""
 from api.v1.views import app_views
-from flask import jsonify
+from flask import Flask, Blueprint, jsonify
 from models import storage
 
 
-@app_views.route("/status", strict_slashes=False)
-def status():
-    """ returns a JSON """
-    status = {"status": "OK"}
-    return jsonify(status)
+hbnbText = {
+    "amenities": "Amenity",
+    "cities": "City",
+    "places": "Place",
+    "reviews": "Review",
+    "states": "State",
+    "users": "User"
+}
 
 
-@app_views.route("/stats", strict_slashes=False)
-def stats():
-    """ retrieves the number of each objects by type """
-    class_dict = {"Amenity": "amenities", "City": "cities", "Place": "places",
-                  "Review": "reviews", "State": "states", "User": "users"}
-    objs = {class_dict[cls]: storage.count(cls) for cls in class_dict}
-    return jsonify(objs)
+@app_views.route('/status', strict_slashes=False)
+def hbnbStatus():
+    """hbnbStatus"""
+    return jsonify({"status": "OK"})
+
+
+@app_views.route('/stats', strict_slashes=False)
+def hbnbStats():
+    """hbnbStats"""
+    return_dict = {}
+    for key, value in hbnbText.items():
+        return_dict[key] = storage.count(value)
+    return jsonify(return_dict)
+
+if __name__ == "__main__":
+    pass
