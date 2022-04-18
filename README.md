@@ -1,4 +1,4 @@
-# AirBnB Clone - The Console
+# AirBnB clone - RESTful API
 
 #### Functionalities of this command interpreter:
 * Create a new object (ex: a new User or a new Place)
@@ -131,4 +131,5 @@ No known bugs at this time.
 
 ## License
 Public Domain. No copy write protection.
-# AirBnB_clone_v3
+
+# AirBnB clone - RESTful API
