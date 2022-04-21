@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Places
-"""
+"""Places.py"""
 
 from flask import abort, jsonify, make_response, request
 import requests
