@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Places.py"""
+"""
+Contains Places view for the API"""
 
 from flask import abort, jsonify, make_response, request
 import requests
